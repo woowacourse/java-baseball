@@ -1,5 +1,46 @@
 # 미션 - 숫자 야구 게임
 
+## 구현할 기능 목록
+![baseball](https://user-images.githubusercontent.com/49307266/100554069-b28dea80-32d5-11eb-8881-d0fb0673b8ce.png)
+### 입력 채널
+- 숫자만을 입력했는지 체크, 그렇지 않은 경우 IllegalArgumentException
+- baseBallNumber인지 체크, 그렇지 않은 경우 IllegalArgumentException
+    - 3자리 양수 인지 체크
+    - 1~9의 숫자로만 이루어져 있는 지 체크
+    - 중복된 자리수가 있는지 체크
+- reGameCode인지 체크, 그렇지 않은 경우 IllegalArgumentException
+    - 1 또는 2로만 이루어 져 있는지 체크
+    
+### 게임 로직
+
+- 3자리 baseBallNumber 생성하기.(Baseball Number Generator)
+    - RandomUtils로 1~9 숫자 생성
+    - 위 과정을 3번 진행하고, 연결하여 3자리 수 만들기
+    - baseBallNumber 조건을 만족할 때까지, 새로 생성
+
+- Application
+    - Game 인스턴스를 생성하고, 한 번의 게임 진행.
+    - 계속 게임을 진행할 것인지 물어봄
+- Game
+    - 맞출 때까지, 입력 채널에서 입력을 받고, pitch 생성
+    - pitch마다 printHint 진행
+- Pitch
+    - 숫자를 Integer 리스트로 변환하는 로직 구현
+    - Calculator를 인수로 받아 스트라이크, 볼 갯수 카운트.
+    - 출력 채널에 printHint
+- Calculator
+    - countOverlap: index에 관계없이 겹치는 경우 
+    - countStrike: index와 값 모두 같은 경우
+    - countBall: countOverlap - countStrike
+
+### 출력 채널
+- baseBallNumber 질문 출력
+- Pitch에서 strike, ball 갯수에 따라 printHint 작성
+    - 낫싱, ~볼 ~스트라이크
+- 정답을 맞춘 경우, 축하메세지와 함께 reGame 여부를 묻는 질문 출력
+
+<br>
+
 ## 🚀 기능 요구사항
 - 이 게임은 프로그램이 1에서 9까지 서로 다른 임의의 수 3개를 정하고 이를 플레이어가 맞추는 게임이다.
 - 정답을 맞추기 위해 3자리수를 입력하고 힌트를 받는다.
