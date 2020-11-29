@@ -104,6 +104,52 @@ private static final Random RANDOM = new Random();
 
 <br>
 
+## 구현할 기능 목록
+1. 세자리 랜덤 숫자를 뽑음 (makeThreeRandNum)
+    - set으로 뽑아 중복을 제거하고 세 숫자를 뽑아 리스트로 반환
+    - 정렬된 형태로 반환됨
+
+2. 무작위로 섞은 랜덤 숫자 생성 (randNumList)
+    - 정렬된 리스트를 무작위로 섞어 반환
+    
+3. 나의 입력값이 세자리 숫자인지 아닌지의 여부를 알려줌 (notInputThreeDigit)
+    - 세자리 숫자일때 false, 아닐 때 true를 반환
+    
+4. 나의 입력값 숫자 중복 검사 (checkDuplication)
+    - 각 자리수의 숫자가 중복되는지 검사
+      중복이면 true, 중복이 아니면 false 반환
+      
+5. 나의 입력값 0이 들어있는지 검사 (inputZero)
+    - 세 숫자 중 0이 들어있는지 검사
+      들어있으면 true, 아니면 false 반환
+
+6. 나의 입력값 숫자 생성 (makeThreeMyNum)
+    - 입력값의 앞에서 세자리까지 숫자 리스트로 반환
+    - 유효성 검증이 되지 않았음
+
+7. 유효성 검증된 나의 숫자 생성 (myNumList)
+    - 세자리인지 검증하여 아닐 시 IllegalArgumentException 발생
+    - 세자리 검증 후 입력값 숫자 생성
+    - 중복검사하여 중복일시 IllegalArgumentException 발생
+    - 유효성 검증된 세자리 숫자를 각 자리로 분리하여 리스트로 반환
+   
+8. 스트라이크 횟수 반환 (strike)
+    - 랜덤 숫자 리스트, 나의 숫자 리스트 비교
+    - 인덱스와 값이 같을시 스트라이크
+
+9. 볼 횟수 반환 (ball)
+    - 랜덤 숫자 리스트, 나의 숫자 리스트 비교
+    - 인덱스와 값이 다를시 볼
+    
+10. 볼, 스트라이크, 게임 결과 출력 (result)
+    - 볼, 스트라이크 횟수 출력
+    - 3스트라이크일시 메시지 출력
+    
+11. 3스트라이크인지 아닌지 알려줌 (threeStrike)
+    - 3스트라이크일시 true, 아닐시 false 반환
+    
+12. 메인함수 구현 (완료)
+    
 ## 📝 License
 
 This project is [MIT](https://github.com/woowacourse/java-baseball-precourse/blob/master/LICENSE) licensed.
