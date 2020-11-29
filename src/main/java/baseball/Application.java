@@ -5,6 +5,16 @@ import java.util.Scanner;
 public class Application {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
-        // TODO 구현 진행
+
+        GameManager gameManager = new GameManager(scanner);
+
+        while (gameManager.isGameInProgress()) {
+            gameManager.inputUserBaseballs();
+            gameManager.outputUserBaseballResult();
+
+            if (gameManager.isGameSet()) {
+                gameManager.inputGameProgress();
+            }
+        }
     }
 }
