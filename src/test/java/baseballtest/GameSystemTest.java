@@ -1,8 +1,9 @@
-package baseball;
+package baseballtest;
 
+import baseball.GameSystem;
 import java.util.Scanner;
 
-public class Application {
+public class GameSystemTest {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
 
