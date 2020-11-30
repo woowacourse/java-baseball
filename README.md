@@ -1,5 +1,18 @@
 # 미션 - 숫자 야구 게임
 
+## To-do list
+1. 프롬프트 입력 받는 메소드 구현 `main`
+    1) 게임 반복하기 `restartGame`
+2. 3개의 숫자 랜덤 선출 메소드 구현 `NumberUtils`
+    1) 입력된 숫자의 유효성 검증 `validateInput`
+    2) 입력된 값을 배열에 넣기 `createInputNumber`
+    3) 임의의 다른 수 만들기 `createRandomNumber`
+3. 게임 로직 (스트라이크/볼/낫싱) 구현 `Baseball`
+    1) 게임 진행 `playGame`
+    2) 게임 결과 출력 `printScore`
+    2) 각 라운드 판정 `counterRound`
+
+
 ## 🚀 기능 요구사항
 - 이 게임은 프로그램이 1에서 9까지 서로 다른 임의의 수 3개를 정하고 이를 플레이어가 맞추는 게임이다.
 - 정답을 맞추기 위해 3자리수를 입력하고 힌트를 받는다.
