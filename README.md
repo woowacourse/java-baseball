@@ -1,5 +1,20 @@
 # 미션 - 숫자 야구 게임
-
+## 구현할 기능 목록
+- Player
+    - 숫자를 입력 받는다
+- BaseballGame
+    - 랜덤 3자리 숫자와 Player 입력 숫자를 비교한다.
+- BaseballGameLauncher
+    - 게임을 실행한다.
+    - 게임을 종료 또는 재시작한다.
+- Score
+    - 게임 결과를 저장한다.
+    - 게임의 상태를 리턴해준다.
+- View
+    - 화면 출력을 담당한다
+    - Game 관련 메세지를 담당할 GameView
+    - IllegalArgumentException 관련 메세지를 담당할 IllegalArgumentExceptionView 
+ 
 ## 🚀 기능 요구사항
 - 이 게임은 프로그램이 1에서 9까지 서로 다른 임의의 수 3개를 정하고 이를 플레이어가 맞추는 게임이다.
 - 정답을 맞추기 위해 3자리수를 입력하고 힌트를 받는다.
