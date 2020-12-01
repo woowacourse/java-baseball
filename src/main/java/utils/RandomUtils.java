@@ -23,4 +23,5 @@ public class RandomUtils {
 
         return startInclusive + RANDOM.nextInt(endInclusive - startInclusive + 1);
     }
+
 }
