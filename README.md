@@ -12,6 +12,36 @@
 
 <br>
 
+## 🛠구현하기 위한 기능 목록
+
+### 🎲숫자야구 게임을 진행(Applications)
+- 숫자야구 게임을 시작하는 메소드 startGame()
+- 숫자야구 게임이 종료된 뒤 재시작할지, 종료할 지 결정하는 메소드 selectMenu()
+- 숫자 입력을 안내하는 메소드 printNumberInput()
+- 정답-사용자 입력을 비교한 결과를 출력하는 메소드 printNumberMatch()
+
+### 🔢컴퓨터, 유저의 숫자를 다루는 클래스(Number)
+- 숫자를 저장하는 배열과 각 숫자가 사용되었는지 체크하는 배열을 초기화하는 생성자 Number()
+- 지정한 인덱스에 지정한 숫자를 저장하는 메소드 setNumberAt()
+- 특정 인덱스에 저장된 값을 반환하는 메소드 getNumberAt()
+- 특정 숫자가 사용되었는지 체크하는 메소드 isUsedNumber()
+- 특정 숫자가 몇 번째에 위치하는지를 반환하는 메소드 findNumber()
+
+### 📐컴퓨터가 3자리 숫자를 선정
+- 각 자리 숫자를 생성하는 메소드 nextInt() (RandomUtils)
+- 컴퓨터가 RandomUtils 클래스를 활용해서 랜덤 난수를 생성하고 Number객체에 저장하여 반환하는 클래스 setComputerNumber()
+
+### 📟사용자가 3자리 숫자를 입력
+- 사용자로부터 숫자(숫자 형식의 문자열)를 입력받아 반환하는 메소드 getUserInput()
+- 입력 형식의 유효성을 검증하는 메소드 isValidInput()
+- 해당 문자가 1~9 사이의 숫자인지 검사하는 메소드 isValidCharacter()
+- 입력한 숫자가 중복된 값이 있는지 검사하는 메소드 isRedundantInput()
+
+### 🧠사용자의 숫자와 정답을 비교
+- 컴퓨터와 사용자의 세 자리 숫자를 비교해서 볼, 스트라이크 개수를 구하는 메소드 countBallsAndStrikes()
+- 볼과 스트라이크 개수로 사용자에게 보여질 게임 결과 문자열을 생성하는 메소드 printGameResult()
+
+<br>
 ## ✍🏻 입출력 요구사항
 ### ⌨️ 입력
 - 3자리의 수
@@ -51,59 +81,3 @@
 1볼 1스트라이크
 … 
 ```
-
-<br>
-
-## 🎱 프로그래밍 요구사항
-- 자바 코드 컨벤션을 지키면서 프로그래밍한다.
-  - 기본적으로 [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)을 원칙으로 한다.
-  - 단, 들여쓰기는 '2 spaces'가 아닌 '4 spaces'로 한다.
-- indent(인덴트, 들여쓰기) depth를 3이 넘지 않도록 구현한다. 2까지만 허용한다.
-  - 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.
-  - 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리하면 된다.
-- 3항 연산자를 쓰지 않는다.
-- 함수(또는 메소드)가 한 가지 일만 하도록 최대한 작게 만들어라.
-- System.exit 메소드를 사용하지 않는다.
-- 비정상적 입력에 대해서는 IllegalArgumentException을 발생시킨다.
-
-### 프로그래밍 요구사항 - Application
-- Application 클래스를 활용해 구현해야 한다.
-- Application의 패키지 구조와 구현은 변경하지 않는다.
-- `final Scanner scanner = new Scanner(System.in);`는 변경하지 않는다.
-- `// TODO 구현 진행` 이 후 부터 구현한다.
-
-```java
-public class Application {
-    public static void main(String[] args) {
-        final Scanner scanner = new Scanner(System.in);
-        // TODO 구현 진행
-    }
-}
-```
-
-### 프로그래밍 요구사항 - RandomUtils
-- RandomUtils 클래스를 활용해 랜덤 기능을 구현해야 한다.
-- RandomUtils의 패키지 구조와 구현은 변경하지 않는다.
-
-```java
-private static final Random RANDOM = new Random();
-    private RandomUtils() {
-    }
-    public static int nextInt(final int startInclusive, final int endInclusive) {
-    ...
-```
-
-<br>
-
-## 📈 진행 요구사항
-- 미션은 [java-baseball-precourse 저장소](https://github.com/woowacourse/java-baseball-precourse) 를 fork/clone해 시작한다.
-- 기능을 구현하기 전에 java-baseball-precourse/README.md 파일에 구현할 기능 목록을 정리해 추가한다.
-- git의 commit 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위로 추가한다.
-  - [AngularJS Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 참고해 commit log를 남긴다.
-- [프리코스 과제 제출 문서](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 절차를 따라 미션을 제출한다.
-
-<br>
-
-## 📝 License
-
-This project is [MIT](https://github.com/woowacourse/java-baseball-precourse/blob/master/LICENSE) licensed.
