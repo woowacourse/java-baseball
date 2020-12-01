@@ -1,5 +1,25 @@
 # 미션 - 숫자 야구 게임
 
+## 기능 구현
+- 숫자야구게임: 게임을 전체적인 흐름을 관리.
+- 입력: 서로 다른 임의의 수 3개를 입력 받도록 하고 입력 규칙을 벗어난 예외를 처리.
+- 공 리스트: 정해진 개수만큼 공을 담을 수 있는 일급컬렉션.
+- 공: 1~9의 수를 wrap한 객체. 범위를 벗어난 예외를 처리.
+- 게임결과: 게임 한판을 결과를 받아 저장하고 적절한 형태로 반환.
+
+## 예외 상황
+**입력: 3개의 서로 다른 숫자 이외의 입력값을 예외처리**
+-[x] 1~9이외의 수
+-[x] 중복된 수
+-[x] 3개가 아님
+-[x] 문자열
+-[x] 공백, 개행 문자(/t, /n 등)
+-[x] 연속되지 않음("1 23", "1 2 3")
+
+**숫자 생성: 3개의 서로 다른 숫자 이외의 예외**
+-[x] 중복된 수
+-[x] 3개가 아님
+
 ## 🚀 기능 요구사항
 - 이 게임은 프로그램이 1에서 9까지 서로 다른 임의의 수 3개를 정하고 이를 플레이어가 맞추는 게임이다.
 - 정답을 맞추기 위해 3자리수를 입력하고 힌트를 받는다.
@@ -56,7 +76,7 @@
 
 ## 🎱 프로그래밍 요구사항
 - 자바 코드 컨벤션을 지키면서 프로그래밍한다.
-  - 기본적으로 [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)을 원칙으로 한다.
+  - 기본적으로 [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) 을 원칙으로 한다.
   - 단, 들여쓰기는 '2 spaces'가 아닌 '4 spaces'로 한다.
 - indent(인덴트, 들여쓰기) depth를 3이 넘지 않도록 구현한다. 2까지만 허용한다.
   - 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.
@@ -87,10 +107,10 @@ public class Application {
 
 ```java
 private static final Random RANDOM = new Random();
-    private RandomUtils() {
-    }
-    public static int nextInt(final int startInclusive, final int endInclusive) {
-    ...
+private RandomUtils() {
+}
+public static int nextInt(final int startInclusive, final int endInclusive) {
+...
 ```
 
 <br>
